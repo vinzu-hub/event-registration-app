@@ -1,0 +1,10 @@
+{
+  "name": "event-registration",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && npm run dev\" \"timeout /t 3 && start http://localhost:5173\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
