@@ -92,7 +92,8 @@ CREATE TABLE registrations (
 
 🔹 Registration Page
 
-<img width="1904" height="905" alt="Screenshot 2026-04-04 225820" src="https://github.com/user-attachments/assets/e7da27d4-5418-496a-b119-7807400d30b3" />
+<img width="1904" height="898" alt="Screenshot 2026-04-04 225811" src="https://github.com/user-attachments/assets/31a8403e-5446-42eb-b0ba-c5a9c0606a21" />
+
 
 
 🔹 Success Screen
