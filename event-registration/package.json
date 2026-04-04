@@ -5,6 +5,8 @@
     "start": "concurrently \"cd backend && node server.js\" \"cd frontend && npm run dev\" \"timeout /t 3 && start http://localhost:5173\""
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "concurrently": "^9.2.1",
     "framer-motion": "^12.38.0"
   }

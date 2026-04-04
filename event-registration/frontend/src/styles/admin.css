@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BACKGROUND */
+.admin-container {
+  min-height: 100vh;
+  padding: 40px;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url("https://static.prod-images.emergentagent.com/jobs/ccc9a1bb-94be-4dad-9a09-56999cae6eb1/images/49124f33fa88e1b10c31920694e9a19e58c1dcba7d19886da734966d28f45c35.png")
+    no-repeat center/cover;
+
+  color: white;
+}
+
+/* TITLE */
+.admin-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+
+  background: linear-gradient(90deg, #ff4ecd, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  max-width: 1000px;
+  margin: auto;
+
+  background: rgba(20,20,30,0.8);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  box-shadow: 0 0 30px rgba(255,0,150,0.2);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+thead {
+  background: linear-gradient(90deg, #ff4ecd, #7a5cff);
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  color: white;
+}
+
+/* ROW */
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER EFFECT */
+tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* DELETE BUTTON */
+button {
+  background: linear-gradient(90deg, #ff4ecd, #ff2e63);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff4ecd;
+}
+
+/* NO DATA */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
