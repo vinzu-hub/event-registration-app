@@ -136,8 +136,3 @@ GitHub: https://github.com/vinzu-hub
 
 This project demonstrates a complete full-stack application with frontend, backend, database, and API integration.
 thank you.....👍😎
-
-
----
-
-tha
