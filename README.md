@@ -1,7 +1,7 @@
 🚀 Event Registration System (NEXUS 2026)
 
-A modern full-stack event registration web application built with React, Node.js, Express, and MySQL.
-Designed with a futuristic UI and an admin dashboard for managing registrations.
+A modern full-stack event registration web application built using React, Node.js, Express, and MySQL.
+The system allows users to register for events and provides an admin dashboard to manage registrations.
 
 ---
 
@@ -9,11 +9,11 @@ Designed with a futuristic UI and an admin dashboard for managing registrations.
 
 - 📝 User Registration Form
 - 🎯 Custom Event Selection Dropdown
-- 🔒 Duplicate Email Prevention (Unique Constraint)
-- ⚡ Auto-generated Unique ID for each user
-- ✅ Beautiful Success Screen (Access Granted UI)
-- ❌ Error Handling (validation + duplicate email)
-- 🧑‍💼 Admin Dashboard (view + delete registrations)
+- 🔒 Duplicate Email Prevention
+- ⚡ Unique Access ID Generation
+- ✅ Success Confirmation UI
+- ❌ Error Handling & Validation
+- 🧑‍💼 Admin Dashboard (View + Delete Users)
 - 💾 MySQL Database Integration
 
 ---
@@ -46,34 +46,19 @@ event-registration/
 
 ---
 
-⚙️ Setup Instructions
+⚙️ Prerequisites
 
-1️⃣ Clone the repository
+Make sure you have installed:
 
-git clone https://github.com/YOUR_USERNAME/event-registration-app.git
-cd event-registration
-
----
-
-2️⃣ Backend Setup
-
-cd backend
-npm install
-node server.js
-
----
-
-3️⃣ Frontend Setup
-
-cd frontend
-npm install
-npm run dev
+- Node.js (v16 or above)
+- MySQL Server
+- Git
 
 ---
 
 🗄️ Database Setup
 
-Run this in MySQL:
+Run the following commands in MySQL:
 
 CREATE DATABASE eventDB;
 
@@ -88,21 +73,74 @@ CREATE TABLE registrations (
 
 ---
 
+🔧 Configuration
+
+Open backend file ("server.js") and update your MySQL credentials:
+
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "YOUR_PASSWORD",//1234
+  database: "eventDB",
+});
+
+---
+
+▶️ Run the Application
+
+1️⃣ Start Backend Server
+
+cd backend
+npm install
+node server.js
+
+👉 Backend runs on: http://localhost:3000
+
+---
+
+2️⃣ Start Frontend
+
+cd frontend
+npm install
+npm run dev
+
+👉 Frontend runs on: http://localhost:5173
+
+---
+
+🌐 API Endpoints
+
+Method| Endpoint| Description
+POST| "/register"| Register a new user
+GET| "/registrations"| Get all registrations
+DELETE| "/delete/:id"| Delete a user
+
+---
+
+🧪 How to Use
+
+1. Open frontend in browser
+2. Fill the registration form
+3. Submit details
+4. View success screen with unique ID
+5. Go to "/admin" to manage users
+
+---
+
 📸 Screenshots
 
 🔹 Registration Page
-
-<img width="1904" height="898" alt="Screenshot 2026-04-04 225811" src="https://github.com/user-attachments/assets/31a8403e-5446-42eb-b0ba-c5a9c0606a21" />
-
+<img width="1904" height="898" alt="Screenshot 2026-04-04 225811" src="https://github.com/user-attachments/assets/84d12f69-24d1-4117-8eef-0d075e9925aa" />
 
 
 🔹 Success Screen
-<img width="1904" height="905" alt="Screenshot 2026-04-04 225820" src="https://github.com/user-attachments/assets/026e1068-7eff-4131-b974-6ecd9e8def5a" />
+
+<img width="1904" height="905" alt="Screenshot 2026-04-04 225820" src="https://github.com/user-attachments/assets/1860c5ee-500b-4a3f-9825-a8e2d4c27228" />
 
 
 🔹 Admin Dashboard
 
-<img width="1918" height="928" alt="Screenshot 2026-04-04 225834" src="https://github.com/user-attachments/assets/a53212bc-691b-4513-af7a-f74cba5b8cfa" />
+<img width="1918" height="928" alt="Screenshot 2026-04-04 225834" src="https://github.com/user-attachments/assets/73a35ec7-98c0-4b4a-9e27-1ec376961481" />
 
 
 ---
@@ -110,17 +148,16 @@ CREATE TABLE registrations (
 🚀 Future Improvements
 
 - 📧 Email confirmation system
-- 📱 QR Code for entry
+- 📱 QR code generation
 - 💳 Payment integration
-- ☁️ Cloud deployment (Render / Vercel)
+- ☁️ Cloud deployment (GCP / AWS)
 
 ---
 
 👨‍💻 Author
 
 Vinay
-
-- GitHub: https://github.com/vinzu_boi
+GitHub: https://github.com/vinzu-hub
 
 ---
 
