@@ -1,143 +1,166 @@
-# 🎉 Event Registration System
+🚀 Event Registration System (NEXUS 2026)
 
-A full-stack web application for managing event registrations using **React (Frontend)**, **Node.js (Backend)**, and **MySQL (Database)**.
-
----
-
-## 🚀 Features
-
-* 🧾 User Registration Form (Name, Email, Event)
-* 🎨 Modern UI (Figma-based design with animations)
-* 🔐 Prevent Duplicate Registrations (Unique Email)
-* 📡 REST API Integration
-* 💾 Data stored in MySQL database
-* 📋 View all registrations
+A modern full-stack event registration web application built using React, Node.js, Express, and MySQL.
+The system allows users to register for events and provides an admin dashboard to manage registrations.
 
 ---
 
-## 🛠️ Tech Stack
+✨ Features
 
-* **Frontend:** React + Vite + Tailwind CSS
-* **Backend:** Node.js + Express
-* **Database:** MySQL
-* **Version Control:** Git + GitHub
+- 📝 User Registration Form
+- 🎯 Custom Event Selection Dropdown
+- 🔒 Duplicate Email Prevention
+- ⚡ Unique Access ID Generation
+- ✅ Success Confirmation UI
+- ❌ Error Handling & Validation
+- 🧑‍💼 Admin Dashboard (View + Delete Users)
+- 💾 MySQL Database Integration
 
 ---
 
-## 📁 Project Structure
+🛠️ Tech Stack
+
+Frontend
+
+- React (Vite)
+- CSS (Glassmorphism + Neon UI)
+
+Backend
+
+- Node.js
+- Express.js
+
+Database
+
+- MySQL
+
+---
+
+📂 Project Structure
 
 event-registration/
-│── backend/
-│ ├── server.js
-│ ├── db.js
-│ ├── routes/
-│ └── package.json
-│
-│── frontend/
-│ ├── src/
-│ ├── package.json
-│ └── vite.config.js
+├── backend/
+├── frontend/
+├── README.md
+├── package.json
 
 ---
 
-## ⚙️ Setup Instructions
+⚙️ Prerequisites
 
-### 🔹 1. Clone Repository
+Make sure you have installed:
 
-```bash
-git clone https://github.com/vinzu-hub/event-registration-app.git
-cd event-registration-app
-```
-
----
-
-### 🔹 2. Backend Setup
-
-```bash
-cd backend
-npm install
-node server.js
-```
-
-👉 Runs on: http://localhost:3000
+- Node.js (v16 or above)
+- MySQL Server
+- Git
 
 ---
 
-### 🔹 3. Frontend Setup
+🗄️ Database Setup
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+Run the following commands in MySQL:
 
-👉 Runs on: http://localhost:5173
-
----
-
-## 🗄️ Database Setup (MySQL)
-
-```sql
 CREATE DATABASE eventDB;
 
 USE eventDB;
 
 CREATE TABLE registrations (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    event VARCHAR(100),
-    email VARCHAR(150) UNIQUE
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(150) UNIQUE,
+  event VARCHAR(100)
 );
-```
 
 ---
 
-## 📡 API Endpoints
+🔧 Configuration
 
-### 🔸 Register User
+Open backend file ("server.js") and update your MySQL credentials:
 
-POST /api/register
-
-### 🔸 Get All Registrations
-
-GET /api/registrations
-
----
-
-## 🧠 Key Concept
-
-> Each email can register only once using UNIQUE constraint + backend validation.
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "YOUR_PASSWORD",//1234
+  database: "eventDB",
+});
 
 ---
 
-## 📸 Screenshots
+▶️ Run the Application
 
-(Add your UI screenshots here)
+1️⃣ Start Backend Server
+
+cd backend
+npm install
+node server.js
+
+👉 Backend runs on: http://localhost:3000
 
 ---
 
-## 👨‍💻 Author
+2️⃣ Start Frontend
 
-**Vinay**
+cd frontend
+npm install
+npm run dev
+
+👉 Frontend runs on: http://localhost:5173
+
+---
+
+🌐 API Endpoints
+
+Method| Endpoint| Description
+POST| "/register"| Register a new user
+GET| "/registrations"| Get all registrations
+DELETE| "/delete/:id"| Delete a user
+
+---
+
+🧪 How to Use
+
+1. Open frontend in browser
+2. Fill the registration form
+3. Submit details
+4. View success screen with unique ID
+5. Go to "/admin" to manage users
+
+---
+
+📸 Screenshots
+
+🔹 Registration Page
+<img width="1904" height="898" alt="Screenshot 2026-04-04 225811" src="https://github.com/user-attachments/assets/84d12f69-24d1-4117-8eef-0d075e9925aa" />
+
+
+🔹 Success Screen
+
+<img width="1904" height="905" alt="Screenshot 2026-04-04 225820" src="https://github.com/user-attachments/assets/1860c5ee-500b-4a3f-9825-a8e2d4c27228" />
+
+
+🔹 Admin Dashboard
+
+<img width="1918" height="928" alt="Screenshot 2026-04-04 225834" src="https://github.com/user-attachments/assets/73a35ec7-98c0-4b4a-9e27-1ec376961481" />
+
+
+---
+
+🚀 Future Improvements
+
+- 📧 Email confirmation system
+- 📱 QR code generation
+- 💳 Payment integration
+- ☁️ Cloud deployment (GCP / AWS)
+
+---
+
+👨‍💻 Author
+
+Vinay
 GitHub: https://github.com/vinzu-hub
 
 ---
 
-## ⭐ Future Improvements
+⭐ Support
 
-* Admin Dashboard
-* Delete/Edit registrations
-* Email confirmation system
-* Deployment (Render / Vercel)
-
----
-
-## 📌 Conclusion
-
-This project demonstrates a complete full-stack application with frontend, backend, database, and API integration.
-thank you.....👍😎
-
-
----
-
-tha
+If you like this project, give it a ⭐ on GitHub!
